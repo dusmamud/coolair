@@ -1,0 +1,203 @@
+@import 'tailwindcss';
+
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('/fonts/inter-latin-400-normal.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url('/fonts/inter-latin-500-normal.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: url('/fonts/inter-latin-600-normal.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url('/fonts/inter-latin-700-normal.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Archivo';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url('/fonts/archivo-latin-700-normal.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Archivo';
+	font-style: normal;
+	font-weight: 800;
+	font-display: swap;
+	src: url('/fonts/archivo-latin-800-normal.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Archivo';
+	font-style: normal;
+	font-weight: 900;
+	font-display: swap;
+	src: url('/fonts/archivo-latin-900-normal.woff2') format('woff2');
+}
+
+@theme {
+	--font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+	--font-display: 'Archivo', 'Inter', ui-sans-serif, system-ui, sans-serif;
+	--color-navy-950: #071a2e;
+	--color-navy-900: #0a2540;
+	--color-navy-800: #0e3355;
+	--color-navy-700: #123f68;
+	--color-brand-700: #0b4ea8;
+	--color-brand-600: #0b5ed7;
+	--color-brand-500: #0f62c9;
+	--color-brand-100: #dbeafe;
+	--color-brand-50: #eff6ff;
+	--color-gold-500: #c19a4b;
+	--color-ink-900: #0f172a;
+	--color-ink-600: #475569;
+	--color-ink-500: #64748b;
+}
+
+/* No `scroll-behavior: smooth` here: Lenis handles smooth wheel scrolling.
+   CSS smooth scrolling makes programmatic scrolls (anchor jumps, scrollIntoView)
+   animate for seconds and breaks hit-testing while the page is still moving. */
+html {}
+body {
+	font-family: var(--font-sans);
+	color: var(--color-ink-900);
+	background: #fff;
+	font-size: 16px;
+	line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 {
+	font-family: var(--font-display);
+	line-height: 1.12;
+	letter-spacing: -0.01em;
+}
+::selection {
+	background: var(--color-brand-600);
+	color: #fff;
+}
+:focus-visible {
+	outline: 3px solid var(--color-brand-600);
+	outline-offset: 2px;
+	border-radius: 4px;
+}
+
+/* Shared button + card primitives. They live in @layer components so that
+   Tailwind utilities (e.g. `hidden`, `md:inline-flex`) always win over them:
+   unlayered author CSS beats ALL layered utilities, which made `.btn`'s
+   display:inline-flex override `hidden` on mobile. */
+@layer components {
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	min-height: 48px;
+	padding: 0.75rem 1.5rem;
+	border-radius: 0.5rem;
+	font-weight: 700;
+	font-size: 0.9375rem;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease, box-shadow 200ms ease, transform 200ms cubic-bezier(0.22, 1, 0.36, 1);
+	cursor: pointer;
+}
+.btn-primary {
+	background: var(--color-brand-600);
+	color: #fff;
+}
+.btn-primary:hover {
+	background: var(--color-brand-700);
+	box-shadow: 0 8px 20px rgba(11, 94, 215, 0.28);
+}
+.btn-dark {
+	background: var(--color-navy-900);
+	color: #fff;
+}
+.btn-dark:hover {
+	background: var(--color-navy-800);
+}
+.btn-outline {
+	background: #fff;
+	color: var(--color-brand-600);
+	border: 2px solid var(--color-brand-600);
+}
+.btn-outline:hover {
+	background: var(--color-brand-50);
+}
+.btn-white {
+	background: #fff;
+	color: var(--color-navy-900);
+}
+.btn-white:hover {
+	background: var(--color-brand-100);
+}
+.card-lift {
+	transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 200ms ease;
+}
+.card-lift:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 14px 30px rgba(10, 37, 64, 0.12);
+}
+.eyebrow {
+	font-size: 0.8125rem;
+	font-weight: 700;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--color-brand-600);
+}
+
+/* Hero kinetic words: hidden until JS reveals (JS adds .in per word) */
+.hero-word {
+	display: inline-block;
+	opacity: 0;
+	transform: translateY(0.6em);
+}
+.hero-word.in {
+	opacity: 1;
+	transform: translateY(0);
+	transition: opacity 300ms cubic-bezier(0.22, 1, 0.36, 1), transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Scroll reveal: content visible by default; JS adds .js-anim then .in */
+.js-anim .reveal {
+	opacity: 0;
+	transform: translateY(14px);
+	transition: opacity 300ms cubic-bezier(0.22, 1, 0.36, 1), transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.js-anim .reveal.in {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+} /* end @layer components */
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		transition-duration: 0.01ms !important;
+	}
+	.hero-word,
+	.js-anim .reveal {
+		opacity: 1 !important;
+		transform: none !important;
+	}
+}
