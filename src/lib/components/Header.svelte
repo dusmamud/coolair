@@ -34,7 +34,7 @@
 <!-- Main header -->
 <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
 	<div class="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3">
-		<a href="/" class="flex shrink-0 items-center gap-2.5" aria-label="CoolAir home">
+		<a href="/" class="flex shrink-0 items-center gap-2.5" aria-label="CoolAir AC Service — home">
 			<svg width="44" height="44" viewBox="0 0 48 48" fill="none" aria-hidden="true" class="text-brand-600">
 				<g stroke="currentColor" stroke-width="3.4" stroke-linecap="round">
 					<path d="M24 4v40M6 14l36 20M42 14L6 34" />

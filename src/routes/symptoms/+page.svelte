@@ -25,6 +25,7 @@
 	<title>AC Symptom Finder — Diagnose Your AC Problem | CoolAir</title>
 	<meta name="description" content="AC not cooling, leaking, noisy or smelling? Find the likely cause, the fix and the price for 8 common AC problems — then book the repair." />
 	<link rel="canonical" href="{SITE.baseUrl}/symptoms" />
+	<meta property="og:url" content="{SITE.baseUrl}/symptoms" />
 </svelte:head>
 
 <PageHero eyebrow="Symptom Finder" title="What’s Wrong With Your AC?" subtitle="Tap a symptom below, or read the full guide — likely cause, fix and price for the 8 most common AC problems." crumbs={[{ label: 'Home', href: '/' }, { label: 'Symptoms' }]} />

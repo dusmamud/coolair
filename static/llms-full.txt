@@ -1,0 +1,63 @@
+# CoolAir AC Service — llms-full.txt
+# Demo site. All contact details, prices, reviews and technician names are mock values.
+# Last updated: 2026-11-18
+
+> CoolAir AC Service is a professional AC repair, installation, cleaning, gas filling and maintenance business serving Mumbai, Thane, Navi Mumbai and Pune (mock demo site). 24/7 emergency service, same-day slots, 90-day labour warranty, genuine parts. Prices from ₹299 diagnosis, ₹499 basic service, ₹999 deep cleaning, ₹2,499 gas refill, ₹1,999 split installation. AMC plans from ₹1,499/year. Phone (mock): +91 98765 43210. Email (mock): hello@coolaiir.pages.dev.
+
+## About
+CoolAir is a demo AC service business for Mumbai, Thane, Navi Mumbai and Pune. Technicians are certified and background-checked (mock team). The site offers online booking with a 2-hour arrival window, a pincode coverage checker, an instant price calculator, a symptom finder, AMC maintenance plans, brand pages, city pages, reviews, a blog and a before/after cleaning gallery. All values on the site are mock data for demonstration.
+
+## Services (prices from)
+- [AC Repair](https://coolaiir.pages.dev/services/ac-repair): diagnosis ₹299, most repairs ₹499–₹2,499 — from ₹299
+- [AC Installation](https://coolaiir.pages.dev/services/ac-installation): split ₹1,999, window ₹1,499 — from ₹1,499
+- [AC Cleaning](https://coolaiir.pages.dev/services/ac-cleaning): basic service ₹499, deep jet cleaning ₹999 — from ₹499
+- [Gas Filling](https://coolaiir.pages.dev/services/gas-refilling): gas top-up ₹2,499 after leak check — from ₹2,499
+- [AC Maintenance](https://coolaiir.pages.dev/services/ac-maintenance): regular maintenance, AMC-linked — from ₹499
+- [AC Uninstallation](https://coolaiir.pages.dev/services/ac-uninstallation): safe gas pump-down — from ₹999
+- [PCB & Compressor Repair](https://coolaiir.pages.dev/services/pcb-compressor-repair): board-level PCB repair from ₹1,499 — from ₹1,499
+- [Duct Cleaning](https://coolaiir.pages.dev/services/duct-cleaning): quoted per system size — from ₹1,999
+- [Commercial & VRF](https://coolaiir.pages.dev/services/commercial-vrf): offices, societies, VRF systems — from ₹2,999
+
+## Prices
+- [Transparent rate card](https://coolaiir.pages.dev/prices): diagnosis ₹299, basic service ₹499, deep cleaning ₹999, gas top-up ₹2,499, split install ₹1,999, window install ₹1,499, uninstallation ₹999, PCB repair ₹1,499+, cassette service ₹1,499, duct cleaning ₹1,999+, AMC Basic ₹1,499/yr, AMC Premium ₹3,499/yr.
+
+## Booking & tools
+- [Book a service](https://coolaiir.pages.dev/book): 5-step booking — service, AC type/brand, date + 2-hour slot, pincode check, address — confirmation with booking ID
+- [Track booking](https://coolaiir.pages.dev/track-booking): look up a booking by its ID
+- [Instant quote](https://coolaiir.pages.dev/get-quote): price calculator by service, AC type, brand and problem
+- [Symptom finder](https://coolaiir.pages.dev/symptoms): AC not cooling, water leaking, noisy, bad smell — likely cause, fix and price
+- [AMC plans](https://coolaiir.pages.dev/amc): Basic ₹1,499/yr (2 services + priority slots), Premium ₹3,499/yr (4 services + free gas top-up once)
+- [Offers](https://coolaiir.pages.dev/offers): seasonal offers with expiry dates
+- [Emergency AC repair](https://coolaiir.pages.dev/emergency-ac-repair): 24/7 emergency, priority within 2 hours
+- [Financing](https://coolaiir.pages.dev/financing): EMI options for new AC purchase/installation (mock)
+- [Warranty](https://coolaiir.pages.dev/warranty): 90-day labour warranty, up to 6 months on fitted parts, 1 year on installation workmanship
+
+## Service areas
+- [Mumbai](https://coolaiir.pages.dev/service-areas/mumbai), [Thane](https://coolaiir.pages.dev/service-areas/thane), [Navi Mumbai](https://coolaiir.pages.dev/service-areas/navi-mumbai), [Pune](https://coolaiir.pages.dev/service-areas/pune) — same-day slots, pincode coverage checker on the booking page.
+- [All service areas](https://coolaiir.pages.dev/service-areas)
+
+## Brands serviced
+- [Daikin](https://coolaiir.pages.dev/brands/daikin), [Voltas](https://coolaiir.pages.dev/brands/voltas), [LG](https://coolaiir.pages.dev/brands/lg), [Samsung](https://coolaiir.pages.dev/brands/samsung), [Panasonic](https://coolaiir.pages.dev/brands/panasonic), [Hitachi](https://coolaiir.pages.dev/brands/hitachi), [Carrier](https://coolaiir.pages.dev/brands/carrier), [Haier](https://coolaiir.pages.dev/brands/haier) — genuine parts, brand-specific common faults.
+- [All brands](https://coolaiir.pages.dev/brands)
+
+## Blog
+- [AC Not Cooling? 7 Causes and What to Do Before You Call](https://coolaiir.pages.dev/blog/ac-not-cooling-causes-fixes)
+- [Why AC Leaks Water](https://coolaiir.pages.dev/blog/why-ac-leaks-water)
+- [Split vs Window AC Buying Guide](https://coolaiir.pages.dev/blog/split-vs-window-ac-buying-guide)
+- [Reduce AC Electricity Bill](https://coolaiir.pages.dev/blog/reduce-ac-electricity-bill)
+- [Pre-Summer AC Checklist](https://coolaiir.pages.dev/blog/pre-summer-ac-checklist)
+- [AC Maintenance Checklist Mumbai](https://coolaiir.pages.dev/blog/ac-maintenance-checklist-mumbai)
+- [All blog posts](https://coolaiir.pages.dev/blog)
+
+## Other pages
+- [Home](https://coolaiir.pages.dev/): AC repair & service you can trust
+- [About Us](https://coolaiir.pages.dev/about): 8+ years, 12,500+ jobs (mock), 28 technicians (mock)
+- [Why Us](https://coolaiir.pages.dev/why-us): skilled technicians, affordable pricing, quick response, genuine parts
+- [Team](https://coolaiir.pages.dev/team): mock technician team
+- [Reviews](https://coolaiir.pages.dev/reviews): mock customer reviews with name, locality, technician and job
+- [Gallery](https://coolaiir.pages.dev/gallery): before/after deep-cleaning slider and job photos
+- [FAQ](https://coolaiir.pages.dev/faq): repair costs, response times, brands, warranty, payment, AMC, areas
+- [Commercial](https://coolaiir.pages.dev/commercial): offices, societies, VRF, monthly reporting, after-hours slots
+- [Careers](https://coolaiir.pages.dev/careers): join as a technician (mock)
+- [Contact](https://coolaiir.pages.dev/contact): mock contact details, hours, service areas
+- [Privacy Policy](https://coolaiir.pages.dev/privacy), [Terms](https://coolaiir.pages.dev/terms), [Disclaimer](https://coolaiir.pages.dev/disclaimer)

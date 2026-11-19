@@ -10,6 +10,7 @@
 	import Counters from '#lib/components/Counters.svelte';
 	import BrandStrip from '#lib/components/BrandStrip.svelte';
 	import JsonLd from '#lib/components/JsonLd.svelte';
+	import Picture from '#lib/components/Picture.svelte';
 	import { SERVICES } from '#lib/data/services';
 	import { REVIEWS } from '#lib/data/reviews';
 	import { SITE, inr } from '#lib/data/site';
@@ -23,6 +24,7 @@
 	const faqJson = {
 		'@context': 'https://schema.org',
 		'@type': 'FAQPage',
+		'@id': `${SITE.baseUrl}/#faq`,
 		mainEntity: homeFaqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } }))
 	};
 	const steps = [
@@ -46,7 +48,10 @@
 	<meta property="og:title" content="CoolAir AC Service — AC Repair & Service You Can Trust" />
 	<meta property="og:description" content="Same-day AC repair & service in Mumbai, Thane, Navi Mumbai & Pune. 24/7 emergency. Prices from ₹299." />
 	<meta property="og:image" content="{SITE.baseUrl}/images/og/og-home.jpg" />
+	<meta name="twitter:title" content="CoolAir AC Service — AC Repair & Service You Can Trust" />
+	<meta name="twitter:image" content="{SITE.baseUrl}/images/og/og-home.jpg" />
 	<link rel="canonical" href="{SITE.baseUrl}/" />
+	<meta property="og:url" content="{SITE.baseUrl}/" />
 </svelte:head>
 
 <JsonLd json={faqJson} />
@@ -119,7 +124,7 @@
 						{/each}
 					</ul>
 				</div>
-				<img src="/images/service-maintenance.webp" alt="CoolAir technician giving a thumbs-up after a job" width="1200" height="800" loading="lazy" class="hidden w-36 shrink-0 self-start rounded-xl object-cover sm:block" />
+				<Picture src="/images/service-maintenance.webp" alt="CoolAir technician giving a thumbs-up after a job" width="1200" height="800" sizes="144px" class="hidden w-36 shrink-0 self-start rounded-xl object-cover sm:block" />
 			</div>
 			<a href="/why-us" class="mt-6 inline-flex items-center gap-1.5 font-bold text-brand-600">More about why customers choose us <ArrowRight class="h-4 w-4" /></a>
 		</div>

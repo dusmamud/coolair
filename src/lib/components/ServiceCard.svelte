@@ -2,6 +2,7 @@
 	import { Wrench, SprayCan, Zap, Settings, Package, Cpu, Wind, Building2, ArrowRight } from 'lucide-svelte';
 	import type { Service } from '#lib/data/services';
 	import { inr } from '#lib/data/site';
+	import Picture from '#lib/components/Picture.svelte';
 
 	let { service }: { service: Service } = $props();
 	const icons = { wrench: Wrench, spray: SprayCan, zap: Zap, settings: Settings, package: Package, cpu: Cpu, wind: Wind, building: Building2 } as const;
@@ -10,7 +11,7 @@
 
 <article class="card-lift group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white">
 	<div class="relative">
-		<img src={service.image} alt={service.name} width="1200" height="800" loading="lazy" class="aspect-[3/2] w-full object-cover" />
+		<Picture src={service.image} alt={service.name} width="1200" height="800" sizes="(max-width: 639px) 92vw, (max-width: 1023px) 46vw, 20vw" class="aspect-[3/2] w-full object-cover" />
 		<span class="absolute -bottom-6 left-1/2 flex h-12 w-12 -translate-x-1/2 items-center justify-center rounded-full bg-brand-600 text-white shadow-lg ring-4 ring-white">
 			<Icon class="h-6 w-6" />
 		</span>

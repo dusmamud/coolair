@@ -1,5 +1,6 @@
 <script lang="ts">
 	import PageHero from '#lib/components/PageHero.svelte';
+	import Picture from '#lib/components/Picture.svelte';
 	import { SITE } from '#lib/data/site';
 	import { Building2, Users, FileText, Clock, Check } from 'lucide-svelte';
 
@@ -15,12 +16,13 @@
 	<title>Commercial AC Services — Offices, Societies & VRF | CoolAir</title>
 	<meta name="description" content="CoolAir commercial AC: VRF/VRV installation & AMC, society contracts, office cassette servicing with monthly reports and after-hours slots. Free site survey." />
 	<link rel="canonical" href="{SITE.baseUrl}/commercial" />
+	<meta property="og:url" content="{SITE.baseUrl}/commercial" />
 </svelte:head>
 
 <PageHero eyebrow="Commercial" title="AC That Keeps Your Business Cool" subtitle="Offices, shops, clinics, restaurants and housing societies — VRF systems, multi-unit AMC, and service that works around your hours, not ours." crumbs={[{ label: 'Home', href: '/' }, { label: 'Commercial' }]} />
 
 <section class="mx-auto max-w-7xl px-4 py-12 sm:py-16">
-	<img src="/images/commercial.webp" alt="Technicians inspecting a cassette AC in a modern office" width="1200" height="800" loading="lazy" class="aspect-[21/9] w-full rounded-2xl object-cover shadow-lg" />
+	<Picture src="/images/commercial.webp" alt="Technicians inspecting a cassette AC in a modern office" width="1200" height="800" sizes="(max-width: 1023px) 92vw, 1200px" class="aspect-[21/9] w-full rounded-2xl object-cover shadow-lg" />
 	<div class="mt-10 grid gap-5 sm:grid-cols-2">
 		{#each services as s (s.title)}
 			<article class="card-lift rounded-2xl border border-slate-200 bg-white p-6 sm:p-7">

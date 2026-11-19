@@ -27,6 +27,7 @@
 	<title>AC Service Offers & Discounts | CoolAir</title>
 	<meta name="description" content="CoolAir offers: pre-summer deep clean ₹799 (till 31 March 2027), 15% off 2+ ACs in one visit, free diagnosis for first-time customers." />
 	<link rel="canonical" href="{SITE.baseUrl}/offers" />
+	<meta property="og:url" content="{SITE.baseUrl}/offers" />
 </svelte:head>
 
 <PageHero eyebrow="Offers" title="Offers That Actually Save You Money" subtitle="No inflated “MRP” games — real discounts on real services, with dates printed on them." crumbs={[{ label: 'Home', href: '/' }, { label: 'Offers' }]} />

@@ -14,6 +14,7 @@
 	<title>AC Financing & EMI Options | CoolAir</title>
 	<meta name="description" content="CoolAir financing (mock): no-cost EMI on new ACs, instalments on big repairs above ₹5,000, and quarterly AMC billing. No hidden charges." />
 	<link rel="canonical" href="{SITE.baseUrl}/financing" />
+	<meta property="og:url" content="{SITE.baseUrl}/financing" />
 </svelte:head>
 
 <PageHero eyebrow="Financing" title="Big AC Bills, Smaller Monthly Steps" subtitle="EMI and instalment options for new ACs and large repairs — explained honestly, with no hidden charges." crumbs={[{ label: 'Home', href: '/' }, { label: 'Financing' }]} />

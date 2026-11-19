@@ -9,6 +9,7 @@
 	<title>AC Brands We Service — Daikin, Voltas, LG, Samsung & More | CoolAir</title>
 	<meta name="description" content="CoolAir repairs and services all major AC brands: Daikin, Voltas, LG, Samsung, Panasonic, Hitachi, Carrier and Haier — split, window, cassette and VRF." />
 	<link rel="canonical" href="{SITE.baseUrl}/brands" />
+	<meta property="og:url" content="{SITE.baseUrl}/brands" />
 </svelte:head>
 
 <PageHero eyebrow="Brands" title="We Service All Major Brands" subtitle="Brand-trained technicians, common parts in stock, and honest advice on repair vs replacement — for every brand below." crumbs={[{ label: 'Home', href: '/' }, { label: 'Brands' }]} />

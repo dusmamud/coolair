@@ -40,6 +40,7 @@
 	<title>AMC Plans — Annual Maintenance from ₹1,499/yr | CoolAir</title>
 	<meta name="description" content="CoolAir AMC: Basic ₹1,499/yr (2 services, priority slots, 10% off repairs) and Premium ₹3,499/yr (4 services, free gas top-up, 20% off). Compare and choose." />
 	<link rel="canonical" href="{SITE.baseUrl}/amc" />
+	<meta property="og:url" content="{SITE.baseUrl}/amc" />
 </svelte:head>
 
 <PageHero eyebrow="AMC Plans" title="Annual Maintenance, Zero Summer Panic" subtitle="Scheduled services, priority slots and discounted repairs — one plan, all year, no breakdown roulette." crumbs={[{ label: 'Home', href: '/' }, { label: 'AMC Plans' }]} />

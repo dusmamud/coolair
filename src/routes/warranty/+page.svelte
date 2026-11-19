@@ -15,6 +15,7 @@
 	<title>Warranty — Labour vs Parts, In Plain Words | CoolAir</title>
 	<meta name="description" content="CoolAir warranty: 90 days on labour, 6 months on fitted parts, 1 year on installation workmanship. What is covered, what is not, and how to claim." />
 	<link rel="canonical" href="{SITE.baseUrl}/warranty" />
+	<meta property="og:url" content="{SITE.baseUrl}/warranty" />
 </svelte:head>
 
 <PageHero eyebrow="Warranty" title="Warranty, In Plain Words" subtitle="No fine print games. Here is exactly what is covered, for how long, and how to claim it." crumbs={[{ label: 'Home', href: '/' }, { label: 'Warranty' }]} />

@@ -33,6 +33,7 @@
 	<title>Track Your Booking | CoolAir</title>
 	<meta name="description" content="Track your CoolAir AC service booking by booking ID. See service, date, arrival window and status." />
 	<link rel="canonical" href="{SITE.baseUrl}/track-booking" />
+	<meta property="og:url" content="{SITE.baseUrl}/track-booking" />
 </svelte:head>
 
 <PageHero eyebrow="Track Booking" title="Where Is My Technician?" subtitle="Enter your booking ID (from your confirmation screen) to see your booking details. Bookings are saved in this browser on this demo site." crumbs={[{ label: 'Home', href: '/' }, { label: 'Track Booking' }]} />

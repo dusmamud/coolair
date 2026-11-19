@@ -19,6 +19,7 @@
 	const faqJson = {
 		'@context': 'https://schema.org',
 		'@type': 'FAQPage',
+		'@id': `${SITE.baseUrl}/faq#faq`,
 		mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } }))
 	};
 </script>
@@ -27,6 +28,7 @@
 	<title>AC Service FAQ — Prices, Warranty, Booking | CoolAir</title>
 	<meta name="description" content="CoolAir FAQ: repair costs, response times, brands, warranty, payment, AMC and service areas — answered in plain words." />
 	<link rel="canonical" href="{SITE.baseUrl}/faq" />
+	<meta property="og:url" content="{SITE.baseUrl}/faq" />
 </svelte:head>
 
 <JsonLd json={faqJson} />

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { ChevronsLeftRight } from 'lucide-svelte';
+	import { srcsetFor } from '#lib/images';
 	let { before = '/images/before-dirty.webp', after = '/images/after-clean.webp' }: { before?: string; after?: string } = $props();
 	let pos = $state(50);
 	let dragging = $state(false);
@@ -18,30 +19,27 @@
 	function onPointerMove(e: PointerEvent) {
 		if (dragging) update(e.clientX);
 	}
-	function onKey(e: KeyboardEvent) {
-		if (e.key === 'ArrowLeft') pos = Math.max(4, pos - 4);
-		if (e.key === 'ArrowRight') pos = Math.min(96, pos + 4);
-	}
+	// Keyboard control lives on the native range input below (arrow keys
+	// adjust it natively) — no separate key handler needed here.
 </script>
 
+<!-- Plain container: the native range input below is the accessible slider
+	control (a wrapper role="slider" around it is a double slider and trips
+	aria-prohibited-attr). Pointer drag still works on this container.
+	svelte-ignore: the div is intentionally role-less — the range input
+	inside is the keyboard/AT control. -->
+<!-- svelte-ignore a11y_no_static_element_interactions -->
 <div
 	bind:this={box}
 	class="relative w-full touch-none overflow-hidden rounded-2xl border border-slate-200 select-none"
-	role="slider"
-	aria-label="Before and after AC cleaning comparison"
-	aria-valuenow={Math.round(pos)}
-	aria-valuemin={0}
-	aria-valuemax={100}
-	tabindex="0"
 	onpointerdown={onPointerDown}
 	onpointermove={onPointerMove}
 	onpointerup={() => (dragging = false)}
 	onpointercancel={() => (dragging = false)}
-	onkeydown={onKey}
 >
-	<img src={after} alt="AC coil after deep cleaning — clean and shiny" width="1000" height="666" loading="lazy" class="block aspect-[3/2] w-full object-cover" draggable="false" />
+	<img src={after} srcset={srcsetFor(after)} sizes="(max-width: 1023px) 92vw, 50vw" alt="AC coil after deep cleaning — clean and shiny" width="1000" height="666" loading="lazy" class="block aspect-[3/2] w-full object-cover" draggable="false" />
 	<div class="absolute inset-0 overflow-hidden" style="width: {pos}%">
-		<img src={before} alt="AC coil before cleaning — covered in dust" width="1000" height="666" loading="lazy" class="block aspect-[3/2] w-full max-w-none object-cover" style="width: {box ? box.clientWidth + 'px' : '100%'}" draggable="false" />
+		<img src={before} srcset={srcsetFor(before)} sizes="(max-width: 1023px) 92vw, 50vw" alt="AC coil before cleaning — covered in dust" width="1000" height="666" loading="lazy" class="block aspect-[3/2] w-full max-w-none object-cover" style="width: {box ? box.clientWidth + 'px' : '100%'}" draggable="false" />
 	</div>
 	<span class="absolute left-3 top-3 rounded-md bg-navy-900/85 px-2.5 py-1 text-xs font-bold text-white">BEFORE</span>
 	<span class="absolute right-3 top-3 rounded-md bg-brand-600 px-2.5 py-1 text-xs font-bold text-white">AFTER</span>

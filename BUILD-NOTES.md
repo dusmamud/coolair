@@ -40,10 +40,29 @@ Home `/` · About `/about` · Why Us `/why-us` · Team `/team` · Services `/ser
 6. **`vite preview` caches the file tree at startup** — after any rebuild, restart the preview server or new hashed assets 404.
 7. **Never `pkill -f` with a pattern in your own command line** — it kills your own shell (AGENTS.md lesson, re-learned here). Kill the preview server by its session/process id instead.
 
+## Deploy — LIVE 2026-11-18 ~20:15 IST
+- Repo: https://github.com/dusmamud/coolair (PUBLIC, Dus chose public), init commit 884ef08.
+- **Live URL LOCKED: https://coolaiir.pages.dev** — Dus chose coolaiir (double i) because coolair.pages.dev was taken. Pages project name `coolaiir` in `.github/workflows/deploy.yml` (commit 2ed19f2). Repo name stays `coolair`, brand stays CoolAir.
+- Deploy run 44327211302: SUCCESS. First run 44324810543 failed on the deploy step only (repo had no Cloudflare secrets yet — Dus added CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID himself).
+- Live verified: home/services/book/prices/amc/faq/sitemap.xml/robots.txt all 200; home HTML has CoolAir + phone + Book Appointment + 24/7 + OUR AC SERVICES + booking banner + Daikin + HVACBusiness JSON-LD; prices page shows ₹499. One transient 522 on /prices/ right after deploy, 200 on re-check 15s later.
+
 ## Residuals / not done
-- No live deployment, no repo, no push (per task — Dus to decide repo name + public/private).
 - No real PageSpeed/Lighthouse scores measured (no CrUX/field data; local Lighthouse not run — only the checks above).
 - No Google Rich Results / Schema validator run (browser-only tools); JSON-LD verified present in served HTML only.
 - Images are AI-generated mock photos; OG cards are PIL-generated graphics (no photos in them).
 - `.verify/` holds the Playwright script + screenshots (dev-only, not part of the site build).
 - Preview server on port 4173 was stopped after verification.
+
+## Fix round — audit fixes (2026-11-19, Dus approved "sab fix kar do")
+Report: .audit/test-report-2026-11-18.md. UI/UX unchanged — same design, copy, prices, mock data.
+- P0 domain: baseUrl/email `coolair.pages.dev` → `coolaiir.pages.dev` in src/ + static/ (21 occurrences, 0 left); sitemap/canonicals/OG/JSON-LD/robots/llms now coolaiir.
+- P0 /prices overflow at 390px: `min-w-0` on the `lg:col-span-2` grid item — table now scrolls inside its wrapper; verified scrollWidth 390.
+- P1 JSON-LD: `@id` on HVACBusiness (`/#business`), Service (`#service`), FAQPage (`#faq`); Service.provider is now `{"@id": ...}`; openingHours 00:00–23:59 (24/7 claim); logo/image added; areaServed as City entities. NOT added (intentional): aggregateRating (no verified rating), geo (no real coordinates), sameAs (no real social URLs).
+- P1 meta: `og:url` on all 31 pages (canonical URL); twitter:title + twitter:image on home.
+- P1 images: scripts/gen-images.py (PIL) → 34 WebP variants (400/800/1200, hero +1600) in static/images/opt/; shared Picture.svelte + srcsetFor() wired everywhere photos render (hero, cards, detail, gallery, blog, about, team, commercial, before/after slider). Mobile hero now serves hero-800.webp at 390px/2x.
+- P1 dead weight: 11 unreferenced photo JPGs (5,075,691 B, 0 literal references) DELETED; 6 OG JPGs kept. static/images/ 6,465,127 B → 3,154,878 B.
+- P2 llms-full.txt created (static/llms-full.txt, 200). P2 sitemap: `<lastmod>2026-11-18</lastmod>` on all 54 URLs.
+- P2 a11y: slider wrapper role="slider" removed (native range input is the control; the flagged element was actually ReviewCard's star div — now role="img"); header logo aria-label now contains its visible text. Local Lighthouse home mobile A97 → A100, aria-prohibited-attr + label-content-name-mismatch both pass.
+- P2 404 JS shell: INTENTIONAL RESIDUAL — SvelteKit 3 renders the adapter-static fallback with ssr:false/csr:true by design (respond.js renders only the root layout node), so no prerendered content is possible without forking the adapter or dropping the fallback (which would break the custom 404 + deep links). No-JS clients see the shell; JS browsers render the full 404 page.
+- P2 trailing-slash 308s: no fix needed — 0 internal trailing-slash links in the build (the single absolute trailing-slash URL is the home canonical/og:url root, which is correct).
+- Verify: build exit 0; svelte-check 0 errors, 1 warning (pre-existing BookingStepper initial-prop capture); Playwright 27/27 (390 + 1440, booking/track/quote/FAQ/slider); local Lighthouse home mobile P78→P80, LCP 4.4s→4.1s, CLS 0 (VM-throttled; live PageSpeed was P93/LCP 2.7s pre-fix).

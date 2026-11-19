@@ -1,5 +1,6 @@
 <script lang="ts">
 	import PageHero from '#lib/components/PageHero.svelte';
+	import Picture from '#lib/components/Picture.svelte';
 	import Counters from '#lib/components/Counters.svelte';
 	import { SITE } from '#lib/data/site';
 	import { Check, ShieldCheck, Users, Award } from 'lucide-svelte';
@@ -10,13 +11,14 @@
 	<meta name="description" content="CoolAir has served Mumbai, Thane, Navi Mumbai & Pune for 8+ years with certified technicians, genuine parts and honest pricing. Meet the team behind 12,500+ jobs." />
 	<meta property="og:image" content="{SITE.baseUrl}/images/og/og-about.jpg" />
 	<link rel="canonical" href="{SITE.baseUrl}/about" />
+	<meta property="og:url" content="{SITE.baseUrl}/about" />
 </svelte:head>
 
 <PageHero eyebrow="About Us" title="The AC People Mumbai Calls First" subtitle="Eight years, 12,500+ jobs, one rule: quote the price before we start, and stand behind the work after we leave." crumbs={[{ label: 'Home', href: '/' }, { label: 'About Us' }]} />
 
 <section class="mx-auto max-w-7xl px-4 py-12 sm:py-16">
 	<div class="grid items-center gap-10 lg:grid-cols-2">
-		<img src="/images/about-workshop.webp" alt="Inside the CoolAir service workshop" width="1200" height="800" loading="lazy" class="aspect-[3/2] w-full rounded-2xl object-cover shadow-lg" />
+		<Picture src="/images/about-workshop.webp" alt="Inside the CoolAir service workshop" width="1200" height="800" sizes="(max-width: 1023px) 92vw, 620px" class="aspect-[3/2] w-full rounded-2xl object-cover shadow-lg" />
 		<div>
 			<p class="eyebrow">Our Story</p>
 			<h2 class="mt-2 text-3xl font-extrabold text-navy-900">Started With One Van. Built on Word of Mouth.</h2>

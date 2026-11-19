@@ -1,5 +1,6 @@
 <script lang="ts">
 	import PageHero from '#lib/components/PageHero.svelte';
+	import Picture from '#lib/components/Picture.svelte';
 	import BeforeAfterSlider from '#lib/components/BeforeAfterSlider.svelte';
 	import { SITE } from '#lib/data/site';
 
@@ -17,6 +18,7 @@
 	<title>Gallery — Our Work, Before & After | CoolAir</title>
 	<meta name="description" content="CoolAir gallery: real job photos — installation, repair, deep cleaning, gas filling and commercial work — plus a before/after cleaning slider. Mock photos for this demo site." />
 	<link rel="canonical" href="{SITE.baseUrl}/gallery" />
+	<meta property="og:url" content="{SITE.baseUrl}/gallery" />
 </svelte:head>
 
 <PageHero eyebrow="Gallery" title="Our Work, Up Close" subtitle="Job photos from real visits — and a before/after slider that shows what a deep clean actually does. Photos are mock images for this demo site." crumbs={[{ label: 'Home', href: '/' }, { label: 'Gallery' }]} />
@@ -30,7 +32,7 @@
 	<div class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
 		{#each shots as s (s.src)}
 			<figure class="card-lift overflow-hidden rounded-2xl border border-slate-200 bg-white">
-				<img src={s.src} alt={s.alt} width="1200" height="800" loading="lazy" class="aspect-[3/2] w-full object-cover" />
+				<Picture src={s.src} alt={s.alt} width="1200" height="800" sizes="(max-width: 639px) 92vw, (max-width: 1023px) 46vw, 31vw" class="aspect-[3/2] w-full object-cover" />
 				<figcaption class="px-5 py-4 font-bold text-navy-900">{s.label}</figcaption>
 			</figure>
 		{/each}

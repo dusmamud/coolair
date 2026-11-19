@@ -12,6 +12,7 @@
 	<title>{brand.name} AC Repair & Service in Mumbai | CoolAir</title>
 	<meta name="description" content="CoolAir {brand.name} AC repair & service. {brand.about} Common issues and strengths — same-day slots in Mumbai, Thane, Navi Mumbai & Pune." />
 	<link rel="canonical" href="{SITE.baseUrl}/brands/{brand.slug}" />
+	<meta property="og:url" content="{SITE.baseUrl}/brands/{brand.slug}" />
 </svelte:head>
 
 <PageHero eyebrow="Brand" title="{brand.name} AC Repair & Service" subtitle={brand.tagline} crumbs={[{ label: 'Home', href: '/' }, { label: 'Brands', href: '/brands' }, { label: brand.name }]} />

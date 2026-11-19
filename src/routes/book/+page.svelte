@@ -18,6 +18,7 @@
 	<meta name="description" content="Book AC repair, installation, cleaning or gas filling online. Pick a service, date and 2-hour arrival window. No advance payment — pay after the job." />
 	<meta property="og:image" content="{SITE.baseUrl}/images/og/og-book.jpg" />
 	<link rel="canonical" href="{SITE.baseUrl}/book" />
+	<meta property="og:url" content="{SITE.baseUrl}/book" />
 </svelte:head>
 
 <PageHero eyebrow="Book a Service" title="Book Your AC Service in 2 Minutes" subtitle="Pick a service, a date and a 2-hour arrival window. No advance payment — pay after the job is done and cooling is tested." crumbs={[{ label: 'Home', href: '/' }, { label: 'Book a Service' }]} />

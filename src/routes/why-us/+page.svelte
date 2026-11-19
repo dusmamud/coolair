@@ -18,6 +18,7 @@
 	<title>Why Choose CoolAir? | CoolAir AC Service</title>
 	<meta name="description" content="Certified technicians, transparent pricing from ₹299, same-day slots, genuine parts and a 90-day warranty. Six reasons Mumbai, Thane, Navi Mumbai & Pune choose CoolAir." />
 	<link rel="canonical" href="{SITE.baseUrl}/why-us" />
+	<meta property="og:url" content="{SITE.baseUrl}/why-us" />
 </svelte:head>
 
 <PageHero eyebrow="Why Us" title="Why 10,000+ Customers Choose CoolAir" subtitle="Not the cheapest quote on the internet — the one you can trust when the AC dies on the hottest day of the year." crumbs={[{ label: 'Home', href: '/' }, { label: 'Why Us' }]} />

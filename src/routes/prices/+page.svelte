@@ -26,13 +26,14 @@
 	<meta name="description" content="CoolAir transparent prices: diagnosis ₹299, basic service ₹499, deep cleaning ₹999, gas top-up ₹2,499, split installation ₹1,999. No hidden charges — quote before work starts." />
 	<meta property="og:image" content="{SITE.baseUrl}/images/og/og-prices.jpg" />
 	<link rel="canonical" href="{SITE.baseUrl}/prices" />
+	<meta property="og:url" content="{SITE.baseUrl}/prices" />
 </svelte:head>
 
 <PageHero eyebrow="Prices" title="Transparent Prices. No Surprises." subtitle="The price you see here is the price you pay. Every job starts with a written quote — approve it, or pay only the ₹299 diagnosis fee." crumbs={[{ label: 'Home', href: '/' }, { label: 'Prices' }]} />
 
 <section class="mx-auto max-w-7xl px-4 py-12 sm:py-16">
 	<div class="grid gap-10 lg:grid-cols-3">
-		<div class="lg:col-span-2">
+		<div class="min-w-0 lg:col-span-2">
 			<div class="overflow-x-auto rounded-2xl border border-slate-200">
 				<table class="w-full min-w-[560px] bg-white text-left">
 					<thead>

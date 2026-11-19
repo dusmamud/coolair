@@ -3,6 +3,7 @@
 	import { browser } from '$app/env';
 	import { Phone, CalendarCheck, ShieldCheck, Headphones, UserCheck, ArrowRight } from 'lucide-svelte';
 	import { SITE } from '#lib/data/site';
+	import Picture from '#lib/components/Picture.svelte';
 
 	const words1 = ['AC', 'REPAIR', '&', 'SERVICE'];
 	const words2 = ['YOU', 'CAN', 'TRUST'];
@@ -62,12 +63,14 @@
 		</div>
 
 		<div class="relative">
-			<img
+			<Picture
 				src="/images/hero.webp"
 				alt="CoolAir technician repairing a wall-mounted split AC"
 				width="1600"
 				height="1066"
+				loading="eager"
 				fetchpriority="high"
+				sizes="(max-width: 1023px) 92vw, 620px"
 				class="aspect-[3/2] w-full rounded-2xl object-cover shadow-xl"
 			/>
 			<a href="/emergency-ac-repair" class="card-lift absolute -bottom-5 left-4 flex items-center gap-3 rounded-2xl bg-white p-4 shadow-xl ring-1 ring-slate-200 sm:left-8">

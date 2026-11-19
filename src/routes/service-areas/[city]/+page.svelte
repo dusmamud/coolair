@@ -13,6 +13,7 @@
 	<title>AC Repair & Service in {city.name} — Same-Day | CoolAir</title>
 	<meta name="description" content="CoolAir AC repair, installation & cleaning in {city.name}. {city.tagline} {city.eta}." />
 	<link rel="canonical" href="{SITE.baseUrl}/service-areas/{city.slug}" />
+	<meta property="og:url" content="{SITE.baseUrl}/service-areas/{city.slug}" />
 </svelte:head>
 
 <PageHero eyebrow="Service Area" title="AC Service in {city.name}" subtitle={city.tagline} crumbs={[{ label: 'Home', href: '/' }, { label: 'Service Areas', href: '/service-areas' }, { label: city.name }]} />

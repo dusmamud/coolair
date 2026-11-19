@@ -4,20 +4,20 @@
 > CoolAir AC Service is a professional AC repair, installation, cleaning, gas filling and maintenance business serving Mumbai, Thane, Navi Mumbai and Pune (mock demo site). 24/7 emergency service. Prices from ₹299 diagnosis, ₹499 basic service, ₹999 deep cleaning, ₹2,499 gas refill, ₹1,999 split installation. AMC plans from ₹1,499/year.
 
 ## Pages
-- [Home](https://coolair.pages.dev/): AC repair & service you can trust
-- [Services](https://coolair.pages.dev/services): repair, installation, cleaning, gas filling, maintenance, uninstallation, PCB & compressor, duct cleaning, commercial VRF
-- [Prices](https://coolair.pages.dev/prices): transparent rate card
-- [AMC Plans](https://coolair.pages.dev/amc): Basic ₹1,499/yr, Premium ₹3,499/yr
-- [Book a service](https://coolair.pages.dev/book): multi-step booking with pincode check
-- [Instant quote](https://coolair.pages.dev/get-quote): price calculator
-- [Symptom finder](https://coolair.pages.dev/symptoms): diagnose AC problems
-- [Service areas](https://coolair.pages.dev/service-areas): Mumbai, Thane, Navi Mumbai, Pune
-- [Brands](https://coolair.pages.dev/brands): Daikin, Voltas, LG, Samsung, Panasonic, Hitachi, Carrier, Haier
-- [Reviews](https://coolair.pages.dev/reviews): mock customer reviews
-- [FAQ](https://coolair.pages.dev/faq): common questions
-- [Blog](https://coolair.pages.dev/blog): AC care guides
-- [Contact](https://coolair.pages.dev/contact): mock contact details
-- [Emergency AC repair](https://coolair.pages.dev/emergency-ac-repair): 24/7 emergency
-- [Warranty](https://coolair.pages.dev/warranty): labour vs parts warranty
-- [Financing](https://coolair.pages.dev/financing): EMI options (mock)
-- [Commercial](https://coolair.pages.dev/commercial): offices, societies, VRF
+- [Home](https://coolaiir.pages.dev/): AC repair & service you can trust
+- [Services](https://coolaiir.pages.dev/services): repair, installation, cleaning, gas filling, maintenance, uninstallation, PCB & compressor, duct cleaning, commercial VRF
+- [Prices](https://coolaiir.pages.dev/prices): transparent rate card
+- [AMC Plans](https://coolaiir.pages.dev/amc): Basic ₹1,499/yr, Premium ₹3,499/yr
+- [Book a service](https://coolaiir.pages.dev/book): multi-step booking with pincode check
+- [Instant quote](https://coolaiir.pages.dev/get-quote): price calculator
+- [Symptom finder](https://coolaiir.pages.dev/symptoms): diagnose AC problems
+- [Service areas](https://coolaiir.pages.dev/service-areas): Mumbai, Thane, Navi Mumbai, Pune
+- [Brands](https://coolaiir.pages.dev/brands): Daikin, Voltas, LG, Samsung, Panasonic, Hitachi, Carrier, Haier
+- [Reviews](https://coolaiir.pages.dev/reviews): mock customer reviews
+- [FAQ](https://coolaiir.pages.dev/faq): common questions
+- [Blog](https://coolaiir.pages.dev/blog): AC care guides
+- [Contact](https://coolaiir.pages.dev/contact): mock contact details
+- [Emergency AC repair](https://coolaiir.pages.dev/emergency-ac-repair): 24/7 emergency
+- [Warranty](https://coolaiir.pages.dev/warranty): labour vs parts warranty
+- [Financing](https://coolaiir.pages.dev/financing): EMI options (mock)
+- [Commercial](https://coolaiir.pages.dev/commercial): offices, societies, VRF

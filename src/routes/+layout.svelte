@@ -6,32 +6,43 @@
 	import Footer from '#lib/components/Footer.svelte';
 	import StickyMobileBar from '#lib/components/StickyMobileBar.svelte';
 	import JsonLd from '#lib/components/JsonLd.svelte';
-	import { SITE } from '#lib/data/site';
+	import { SITE, BUSINESS_ID } from '#lib/data/site';
 	import type { LayoutProps } from './$types';
 
 	let { children }: LayoutProps = $props();
 
+	// Single business identity every other schema block references via @id.
+	// (No aggregateRating — no verified rating exists; no geo — no real
+	// coordinates; no sameAs — no real social URLs, socials are placeholders.)
 	const orgJson = {
 		'@context': 'https://schema.org',
 		'@type': 'HVACBusiness',
+		'@id': BUSINESS_ID,
 		name: SITE.fullName,
 		description: 'Professional AC repair, installation, cleaning, gas filling and maintenance across Mumbai, Thane, Navi Mumbai and Pune.',
 		url: SITE.baseUrl,
 		telephone: SITE.phoneDisplay,
 		email: SITE.email,
 		priceRange: SITE.priceRange,
+		logo: `${SITE.baseUrl}/images/og/og-home.jpg`,
+		image: `${SITE.baseUrl}/images/og/og-home.jpg`,
 		address: {
 			'@type': 'PostalAddress',
 			addressLocality: 'Mumbai',
 			addressRegion: 'Maharashtra',
 			addressCountry: 'IN'
 		},
-		areaServed: ['Mumbai', 'Thane', 'Navi Mumbai', 'Pune'],
+		areaServed: [
+			{ '@type': 'City', name: 'Mumbai' },
+			{ '@type': 'City', name: 'Thane' },
+			{ '@type': 'City', name: 'Navi Mumbai' },
+			{ '@type': 'City', name: 'Pune' }
+		],
 		openingHoursSpecification: {
 			'@type': 'OpeningHoursSpecification',
 			dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-			opens: '08:00',
-			closes: '22:00'
+			opens: '00:00',
+			closes: '23:59'
 		}
 	};
 

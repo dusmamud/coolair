@@ -21,6 +21,7 @@
 	<title>Careers at CoolAir — AC Technicians Wanted | CoolAir</title>
 	<meta name="description" content="Work at CoolAir: AC technician, installation lead, service coordinator and apprentice roles in Mumbai, Thane, Navi Mumbai & Pune. Paid training, insurance, growth path." />
 	<link rel="canonical" href="{SITE.baseUrl}/careers" />
+	<meta property="og:url" content="{SITE.baseUrl}/careers" />
 </svelte:head>
 
 <PageHero eyebrow="Careers" title="Fix ACs. Build a Career." subtitle="We hire for attitude and train for skill. If you are honest with customers and careful with their homes, you will do well here." crumbs={[{ label: 'Home', href: '/' }, { label: 'Careers' }]} />

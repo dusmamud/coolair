@@ -1,5 +1,6 @@
 <script lang="ts">
 	import PageHero from '#lib/components/PageHero.svelte';
+	import Picture from '#lib/components/Picture.svelte';
 	import { SITE } from '#lib/data/site';
 	import { Star, MapPin } from 'lucide-svelte';
 
@@ -18,12 +19,13 @@
 	<title>Meet the CoolAir Team | CoolAir AC Service</title>
 	<meta name="description" content="Meet CoolAir's certified AC technicians — background-checked, brand-trained, and rated by customers after every job. Mock team for this demo site." />
 	<link rel="canonical" href="{SITE.baseUrl}/team" />
+	<meta property="og:url" content="{SITE.baseUrl}/team" />
 </svelte:head>
 
 <PageHero eyebrow="Our Team" title="Meet the People Who Fix Your AC" subtitle="Certified, background-checked and brand-trained. Every technician is rated by customers after every job — and the ratings are published here." crumbs={[{ label: 'Home', href: '/' }, { label: 'Team' }]} />
 
 <section class="mx-auto max-w-7xl px-4 py-12 sm:py-16">
-	<img src="/images/team.webp" alt="The CoolAir technician team in navy uniforms" width="1200" height="800" loading="lazy" class="aspect-[21/9] w-full rounded-2xl object-cover shadow-lg" />
+	<Picture src="/images/team.webp" alt="The CoolAir technician team in navy uniforms" width="1200" height="800" sizes="(max-width: 1023px) 92vw, 1200px" class="aspect-[21/9] w-full rounded-2xl object-cover shadow-lg" />
 	<p class="mt-3 text-center text-sm text-ink-500">Mock team photo for this demo site.</p>
 	<div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
 		{#each team as m (m.name)}

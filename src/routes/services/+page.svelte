@@ -11,6 +11,7 @@
 	<meta name="description" content="All CoolAir AC services: repair from ₹299, installation from ₹1,499, deep cleaning ₹999, gas filling from ₹2,499, AMC, PCB & compressor repair, duct cleaning and commercial VRF." />
 	<meta property="og:image" content="{SITE.baseUrl}/images/og/og-services.jpg" />
 	<link rel="canonical" href="{SITE.baseUrl}/services" />
+	<meta property="og:url" content="{SITE.baseUrl}/services" />
 </svelte:head>
 
 <PageHero eyebrow="What We Offer" title="Our AC Services" subtitle="Nine services, one standard: fixed price quoted first, genuine parts, 90-day warranty. Same-day slots in Mumbai, Thane, Navi Mumbai & Pune." crumbs={[{ label: 'Home', href: '/' }, { label: 'Services' }]} />

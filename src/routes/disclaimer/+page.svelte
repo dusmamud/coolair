@@ -7,6 +7,7 @@
 	<title>Disclaimer | CoolAir AC Service</title>
 	<meta name="description" content="CoolAir disclaimer: demo site — all contact details, prices, reviews and technician names are mock values." />
 	<link rel="canonical" href="{SITE.baseUrl}/disclaimer" />
+	<meta property="og:url" content="{SITE.baseUrl}/disclaimer" />
 </svelte:head>
 
 <PageHero eyebrow="Legal" title="Disclaimer" subtitle="Last updated: 18 November 2026." crumbs={[{ label: 'Home', href: '/' }, { label: 'Disclaimer' }]} />

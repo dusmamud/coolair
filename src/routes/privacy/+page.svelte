@@ -7,6 +7,7 @@
 	<title>Privacy Policy | CoolAir AC Service</title>
 	<meta name="description" content="CoolAir privacy policy: what information we collect when you book, how we use it, and your choices. Demo site — mock policy." />
 	<link rel="canonical" href="{SITE.baseUrl}/privacy" />
+	<meta property="og:url" content="{SITE.baseUrl}/privacy" />
 </svelte:head>
 
 <PageHero eyebrow="Legal" title="Privacy Policy" subtitle="Last updated: 18 November 2026. This is a demo-site policy — replace with a lawyer-reviewed version at launch." crumbs={[{ label: 'Home', href: '/' }, { label: 'Privacy Policy' }]} />

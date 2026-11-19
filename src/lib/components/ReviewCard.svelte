@@ -6,7 +6,7 @@
 </script>
 
 <figure class="card-lift flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6">
-	<div class="flex items-center gap-1" aria-label="Rated {review.rating} out of 5">
+	<div class="flex items-center gap-1" role="img" aria-label="Rated {review.rating} out of 5">
 		{#each Array.from({ length: 5 }, (_, i) => i) as i (i)}
 			<Star class="h-4 w-4 {i < review.rating ? 'fill-amber-400 text-amber-400' : 'text-slate-300'}" />
 		{/each}

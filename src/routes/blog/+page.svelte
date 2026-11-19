@@ -1,5 +1,6 @@
 <script lang="ts">
 	import PageHero from '#lib/components/PageHero.svelte';
+	import Picture from '#lib/components/Picture.svelte';
 	import { BLOG_POSTS } from '#lib/data/blog';
 	import { SITE } from '#lib/data/site';
 	import { Search, ArrowRight, Clock } from 'lucide-svelte';
@@ -24,6 +25,7 @@
 	<meta name="description" content="CoolAir blog: AC troubleshooting, maintenance checklists, buying guides and seasonal tips — written in plain words by technicians." />
 	<meta property="og:image" content="{SITE.baseUrl}/images/og/og-blog.jpg" />
 	<link rel="canonical" href="{SITE.baseUrl}/blog" />
+	<meta property="og:url" content="{SITE.baseUrl}/blog" />
 </svelte:head>
 
 <PageHero eyebrow="Blog" title="AC Care Guides & Tips" subtitle="Troubleshooting, maintenance and buying advice — written by the technicians who do the work, in plain words." crumbs={[{ label: 'Home', href: '/' }, { label: 'Blog' }]} />
@@ -45,7 +47,7 @@
 	<div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 		{#each shown as p (p.slug)}
 			<article class="card-lift flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white">
-				<img src={p.image} alt="" width="1200" height="800" loading="lazy" class="aspect-[3/2] w-full object-cover" />
+				<Picture src={p.image} alt="" width="1200" height="800" sizes="(max-width: 639px) 92vw, (max-width: 1023px) 46vw, 31vw" class="aspect-[3/2] w-full object-cover" />
 				<div class="flex flex-1 flex-col p-6">
 					<p class="text-xs font-bold tracking-wide text-brand-600 uppercase">{p.category} · {fmt(p.date)}</p>
 					<h2 class="mt-2 text-xl font-bold leading-snug text-navy-900"><a href="/blog/{p.slug}">{p.title}</a></h2>

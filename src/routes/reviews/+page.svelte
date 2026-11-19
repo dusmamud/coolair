@@ -15,6 +15,7 @@
 	<title>Customer Reviews | CoolAir AC Service</title>
 	<meta name="description" content="Read CoolAir customer reviews from Mumbai, Thane, Navi Mumbai & Pune — repair, installation, cleaning and AMC jobs with technician names. Mock reviews for this demo site." />
 	<link rel="canonical" href="{SITE.baseUrl}/reviews" />
+	<meta property="og:url" content="{SITE.baseUrl}/reviews" />
 </svelte:head>
 
 <PageHero eyebrow="Reviews" title="What Customers Say" subtitle="Every review below names the job, the locality and the technician — because a review without details is just a star." crumbs={[{ label: 'Home', href: '/' }, { label: 'Reviews' }]} />

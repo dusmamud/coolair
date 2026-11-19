@@ -1,5 +1,6 @@
 <script lang="ts">
 	import PageHero from '#lib/components/PageHero.svelte';
+	import Picture from '#lib/components/Picture.svelte';
 	import { BLOG_POSTS } from '#lib/data/blog';
 	import { SITE } from '#lib/data/site';
 	import { Clock, ArrowRight, ArrowLeft } from 'lucide-svelte';
@@ -17,12 +18,13 @@
 	<title>{post.title} | CoolAir Blog</title>
 	<meta name="description" content={post.excerpt} />
 	<link rel="canonical" href="{SITE.baseUrl}/blog/{post.slug}" />
+	<meta property="og:url" content="{SITE.baseUrl}/blog/{post.slug}" />
 </svelte:head>
 
 <PageHero eyebrow="{post.category} · {fmt(post.date)}" title={post.title} subtitle={post.excerpt} crumbs={[{ label: 'Home', href: '/' }, { label: 'Blog', href: '/blog' }, { label: post.title }]} />
 
 <article class="mx-auto max-w-3xl px-4 py-12">
-	<img src={post.image} alt={post.title} width="1200" height="800" loading="lazy" class="aspect-[3/2] w-full rounded-2xl object-cover shadow-lg" />
+	<Picture src={post.image} alt={post.title} width="1200" height="800" sizes="(max-width: 1023px) 92vw, 800px" class="aspect-[3/2] w-full rounded-2xl object-cover shadow-lg" />
 	<p class="mt-4 flex items-center gap-1.5 text-sm text-ink-500"><Clock class="h-4 w-4" /> {post.readMinutes} min read · By the CoolAir team</p>
 	{#each post.sections as s (s.heading)}
 		<h2 class="mt-10 text-2xl font-extrabold text-navy-900">{s.heading}</h2>

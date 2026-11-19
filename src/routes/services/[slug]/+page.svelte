@@ -1,10 +1,11 @@
 <script lang="ts">
 	import PageHero from '#lib/components/PageHero.svelte';
+	import Picture from '#lib/components/Picture.svelte';
 	import FaqAccordion from '#lib/components/FaqAccordion.svelte';
 	import ServiceCard from '#lib/components/ServiceCard.svelte';
 	import JsonLd from '#lib/components/JsonLd.svelte';
 	import { SERVICES } from '#lib/data/services';
-	import { SITE, inr } from '#lib/data/site';
+	import { SITE, BUSINESS_ID, inr } from '#lib/data/site';
 	import { Check, Clock, ShieldCheck, Phone, AlertTriangle } from 'lucide-svelte';
 	import type { PageProps } from './$types';
 
@@ -14,15 +15,17 @@
 	const serviceJson = $derived({
 		'@context': 'https://schema.org',
 		'@type': 'Service',
+		'@id': `${SITE.baseUrl}/services/${service.slug}#service`,
 		name: `${service.name} — CoolAir AC Service`,
 		description: service.description,
-		provider: { '@type': 'HVACBusiness', name: SITE.fullName, telephone: SITE.phoneDisplay },
+		provider: { '@id': BUSINESS_ID },
 		areaServed: ['Mumbai', 'Thane', 'Navi Mumbai', 'Pune'],
 		offers: { '@type': 'Offer', priceCurrency: 'INR', price: service.priceFrom }
 	});
 	const faqJson = $derived({
 		'@context': 'https://schema.org',
 		'@type': 'FAQPage',
+		'@id': `${SITE.baseUrl}/services/${service.slug}#faq`,
 		mainEntity: service.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } }))
 	});
 </script>
@@ -31,6 +34,7 @@
 	<title>{service.name} in Mumbai — From {inr(service.priceFrom)} | CoolAir AC Service</title>
 	<meta name="description" content="{service.description} Prices from {inr(service.priceFrom)}. Same-day slots, 90-day warranty." />
 	<link rel="canonical" href="{SITE.baseUrl}/services/{service.slug}" />
+	<meta property="og:url" content="{SITE.baseUrl}/services/{service.slug}" />
 </svelte:head>
 
 <JsonLd json={serviceJson} />
@@ -41,7 +45,7 @@
 <section class="mx-auto max-w-7xl px-4 py-12 sm:py-16">
 	<div class="grid gap-10 lg:grid-cols-3">
 		<div class="lg:col-span-2">
-			<img src={service.image} alt={service.name} width="1200" height="800" loading="lazy" class="aspect-[3/2] w-full rounded-2xl object-cover shadow-lg" />
+			<Picture src={service.image} alt={service.name} width="1200" height="800" sizes="(max-width: 1023px) 92vw, 800px" class="aspect-[3/2] w-full rounded-2xl object-cover shadow-lg" />
 
 			<h2 class="mt-10 text-2xl font-extrabold text-navy-900">Signs you need this service</h2>
 			<ul class="mt-4 grid gap-2.5 sm:grid-cols-2">

@@ -11,12 +11,12 @@ export const SITE = {
 	phoneDisplay: '+91 98765 43210',
 	phoneHref: 'tel:+919876543210',
 	whatsappHref: 'https://wa.me/919876543210?text=Hi%20CoolAir%2C%20I%20need%20AC%20service',
-	email: 'hello@coolair.pages.dev',
+	email: 'hello@coolaiir.pages.dev',
 	address: 'Andheri West, Mumbai, Maharashtra (mock address)',
 	hours: 'Mon–Sun, 8:00 AM – 10:00 PM',
 	emergencyHours: '24/7 emergency — nights, Sundays & holidays',
 	city: 'Mumbai',
-	baseUrl: 'https://coolair.pages.dev',
+	baseUrl: 'https://coolaiir.pages.dev',
 	priceRange: '₹₹',
 	stats: {
 		jobsDone: 12500,
@@ -27,6 +27,9 @@ export const SITE = {
 		reviewCount: 2400
 	}
 } as const;
+
+/** Canonical @id of the business entity — every JSON-LD block links here. */
+export const BUSINESS_ID = `${SITE.baseUrl}/#business`;
 
 export const MOCK_NOTICE =
 	'Demo site — all contact details, technician names, prices and reviews are mock values.';

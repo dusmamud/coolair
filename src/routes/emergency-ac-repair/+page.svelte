@@ -14,6 +14,7 @@
 	<title>24/7 Emergency AC Repair — Within 2 Hours | CoolAir</title>
 	<meta name="description" content="Emergency AC repair 24/7 in Mumbai, Thane, Navi Mumbai & Pune. Night, Sunday and holiday service. Call +91 98765 43210 — technician within 2 hours." />
 	<link rel="canonical" href="{SITE.baseUrl}/emergency-ac-repair" />
+	<meta property="og:url" content="{SITE.baseUrl}/emergency-ac-repair" />
 </svelte:head>
 
 <PageHero eyebrow="Emergency — 24/7" title="AC Broke at Midnight? We’re Awake." subtitle="Emergency AC repair across Mumbai, Thane, Navi Mumbai and Pune — nights, Sundays and holidays. No night surcharge." crumbs={[{ label: 'Home', href: '/' }, { label: 'Emergency AC Repair' }]} />

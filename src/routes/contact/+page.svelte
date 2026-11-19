@@ -20,8 +20,9 @@
 
 <svelte:head>
 	<title>Contact CoolAir — 24/7 AC Service Helpline | CoolAir</title>
-	<meta name="description" content="Contact CoolAir AC Service: call +91 98765 43210 (24/7), email hello@coolair.pages.dev, or send a message. Mock contact details for this demo site." />
+	<meta name="description" content="Contact CoolAir AC Service: call +91 98765 43210 (24/7), email hello@coolaiir.pages.dev, or send a message. Mock contact details for this demo site." />
 	<link rel="canonical" href="{SITE.baseUrl}/contact" />
+	<meta property="og:url" content="{SITE.baseUrl}/contact" />
 </svelte:head>
 
 <PageHero eyebrow="Contact Us" title="Talk to a Real Human, 24/7" subtitle="Call, WhatsApp or send a message — a person answers, day or night. No chatbots, no ticket numbers." crumbs={[{ label: 'Home', href: '/' }, { label: 'Contact Us' }]} />

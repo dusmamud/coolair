@@ -9,6 +9,7 @@
 	<title>AC Service Areas — Mumbai, Thane, Navi Mumbai, Pune | CoolAir</title>
 	<meta name="description" content="CoolAir serves Mumbai, Thane, Navi Mumbai and Pune with same-day AC repair, installation and cleaning. Find your area, pincodes and response times." />
 	<link rel="canonical" href="{SITE.baseUrl}/service-areas" />
+	<meta property="og:url" content="{SITE.baseUrl}/service-areas" />
 </svelte:head>
 
 <PageHero eyebrow="Service Areas" title="We Serve Four Cities, Same-Day" subtitle="Same transparent rates in every city. Same-day slots, 2–3 hour emergency response, and technicians who know your area’s buildings." crumbs={[{ label: 'Home', href: '/' }, { label: 'Service Areas' }]} />

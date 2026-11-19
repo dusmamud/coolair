@@ -7,6 +7,7 @@
 	<title>Terms of Service | CoolAir AC Service</title>
 	<meta name="description" content="CoolAir terms of service: booking, pricing, payment, warranty and cancellation terms. Demo site — mock terms." />
 	<link rel="canonical" href="{SITE.baseUrl}/terms" />
+	<meta property="og:url" content="{SITE.baseUrl}/terms" />
 </svelte:head>
 
 <PageHero eyebrow="Legal" title="Terms of Service" subtitle="Last updated: 18 November 2026. Demo-site terms — replace with a lawyer-reviewed version at launch." crumbs={[{ label: 'Home', href: '/' }, { label: 'Terms of Service' }]} />
